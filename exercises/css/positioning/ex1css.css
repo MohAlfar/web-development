@@ -1,0 +1,16 @@
+h1 { 
+                color: white; 
+                Background :blue ;
+                display: inline;
+
+            } 
+            body { 
+                padding: 90px; 
+            } 
+            .example { 
+                padding: 30px; 
+                /*margin: auto; */
+                /*margin-top: 10px; */
+                border: 2px solid black; 
+                width: 10px; 
+            } 
