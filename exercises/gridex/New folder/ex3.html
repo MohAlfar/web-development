@@ -3,33 +3,60 @@
 <head>
 	<title>ex3</title>
 	<style>
-		.contanr{
-		display: grid;
-			grid-template-columns: 25%75%;
-			grid-gap: 10px;
-			background:red;
+		.myForm {
+          display: grid;
+          grid-template-columns: 30% 1fr 1fr;
+          grid-auto-flow:  dense;
+          grid-gap: 3em;
+          background: #eee;
+          padding: 1em;
 
-
-	        
-		}
-        
-        #a1{
-            
-        	border: 2;
-        	padding: 10:;
         }
-			
+		 
+	    .myForm > label  {
+          grid-column:1;
+          grid-row: auto;
+        }
+		 
+	    .myForm > input,
+        .myForm > button {
+          grid-column: 2;
+          grid-row: auto;
+          padding: 1em;
+          border: none;
+        }
+        .myForm textarea {
+          min-height: calc(100% - 12em);
+          width: 100%;
+          border: 1;
+        }
+
+        #comment-box {
+          grid-column: 1 ;
+          grid-row: 1/6;
+        }
+       
+            
+       
 
 	</style>
        
 </head>
 <body>
-  <div class="contanr">
-  	<div id="a1">Comments</div>
-  	<div id="a2" >Name</div>
-  	<div id="a3">Email</div>
-  	<div id="a4">phpne</div>
-  	<div id="a5">submit</div>
+
+  <form class="myForm">
+  	<div id="comment-box">
+  	<label for="comments">Comments</label>
+  	<textarea name="comments" id="comments" maxlength="500"></textarea>
     </div>
+    <label for="customer_name"> </label>
+    <input type="text" name="customer_name" id="customer_name" required>
+    <label for="email_address"> </label>
+    <input type="email" name=" email_address" id="email_address">
+    <label for="phone"> </label>
+    <input type="tel" name="phone" id="phone">
+    
+    <button style="grid-column: 1 / 4; grid-row: 4/5" >Submit</button>
+  </form>
 </body>
 </html>
